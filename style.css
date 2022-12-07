@@ -22,7 +22,7 @@ body {
     align-items: center;
     padding: 2rem 2rem;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #myVideo {
