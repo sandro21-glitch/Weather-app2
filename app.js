@@ -39,12 +39,10 @@ const weatherApp = {
         if(main === 'Clear'){
             weatherVideoBg.src = '/img/clear.mp4'
         }
-        // http://openweathermap.org/img/wn/10d@2x.png
+        
         document.querySelector('.city-name').innerText = name
         document.querySelector('.type').innerText = main
-        //document.querySelector('.weather-type').innerText = description
         document.querySelector('.weather-icon').src = `http://openweathermap.org/img/wn/${icon}@2x.png`
-        //document.querySelector('.country-flag').src = `https://countryflagsapi.com/png/${country}`
         document.querySelector('.celsius').innerText = `${convertKelvinToCelsius(temp)}°C`
         document.querySelector('.min').innerText = `${convertKelvinToCelsius(temp_min)}°C`
         document.querySelector('.max').innerText = `${convertKelvinToCelsius(temp_max)}°C`
@@ -64,7 +62,6 @@ let year = date.getFullYear();
 document.querySelector('.date').innerText = `${monthNames[date.getMonth()]} ${day}, ${year}`
 
 
-// weatherApp.fetchWeather('rustavi')
 const input = document.querySelector('.search-input');
 input.addEventListener('keyup', function(e){
     if(e.key === 'Enter'){
